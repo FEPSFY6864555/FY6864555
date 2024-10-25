@@ -38,6 +38,26 @@
           const d = new Date(); 
           document.getElementById("date&time").innerHTML = d;
         </script>
+      <head>
+        <title> Change Button Colour </title>
+      </head>
+      <body>
+        <button id="color Button">Click me to change colour</button>
+        <script> 
+        // Get a reference to the button element 
+          var button = document.getElementById("colorButton");
+          // function to change the button color 
+          function ChangeColor(){
+            // generate a random color (hexadecimal) 
+            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            // set the button's background color to the random color 
+            button.style.backgroundColor = randomColor; 
+          }
+          // Add a click event listener to the button 
+          button.addEventListener("click",changeColor);
+        </script>
+      </body>
+      
       
       <h3 id="Abstract"> Abstract </h3>
       <p class="ex1">
