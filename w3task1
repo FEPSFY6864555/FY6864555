@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Alert box button </title>
+</head>
+<body>
+// creating text field 
+<form> 
+  <label for="text"> Enter Text: </label><br>
+</form> 
+// creating button 
+  <button id="alertButton">Click me to display an alert box</button>
+  
+
+
