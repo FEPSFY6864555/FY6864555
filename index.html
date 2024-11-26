@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>JavaScript Confirm Box</h2>
-
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var txt;
-  if (confirm("Press a button!")) {
-    txt = "You pressed OK!";
-  } else {
-    txt = "You pressed Cancel!";
-  }
-  document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
-</body>
+  <head>
+    <title> Alert Input Text </title>
+  </head>
+  <body>
+    <input type = "text" id "textInput" placeholder="Enter text">
+    <button id="alertButton">Show Alert</button>
+    <script>
+      // get references to the input field and button 
+      var input = document.getElementById("textInput");
+      var button = document.getElementById("alertButton"); 
+      // function to show an alert with the input text
+      function ShowAlert() {
+        var inputText = input.value; 
+        alert("You entered: " + inputText);
+      }
+      // add a click event listener to the button 
+      button.addEventListener("click",showAlert); 
+    </script>
+  </body>
 </html>
