@@ -3,13 +3,15 @@
 <html>
  
   <head>
-    <head>
     <img src ="NEW UoS Logo BLUE.svg" alt="Banner" width="900" height="300">
-      <h1><b> ENG0018 Computer Laboratory 2024/25</b></h1>
+     <script type=”text/javascript” src=https://www.gstatic.com/charts/loader.js></script>
+     <h1><b> ENG0018 Computer Laboratory 2024/25</b></h1>
       <h2> Student URN: 6864556 </h2>
       <hr>
       <h2 style="font-family:calibri;"><b>Conference paper: Ethical Considerations in the integration of Wearable Technology and AI in healthcare  </b></h2>
-    <!table of contents>
+  </head>
+ <body>
+     <!table of contents>
           <table>
  
           <tr>
@@ -110,7 +112,39 @@
      <h3 id="Privacy and Data Security">Privacy and Data Security</h3>
       <p class="ex1">
        <pre> 
+        The pervasiveness of data collection through wearable devices has led to concerns regarding the security of data and loss of privacy.  Health data is considered the most sensitive category of personal information. Its growing commercial value has led to misuse for purposes such as targeted advertising, unlawful service acquisition and identity theft (Cilliers, 2019, Mone and Shakhlo, 2023). Users may be unaware of the extent of data being collected, stored and shared. This is because privacy policies are lengthy, complex and profuse, that conceal details of data collection and usage. Furthermore, data transmission of wearable devices compromises of wireless or Bluetooth technologies which are prone to modification as hackers can tamper with the content of exchanged data packets or alter the timestamp of them (Cilliers, 2019). The absence of stringent security protocols and encryption for data transmission and storage leaves users vulnerable to cyber-attacks and data breaches. Healthcare breaches "affecting 500 people or more were reported to the US Office for Civil Rights of the Department of Health and Human Services (HHS)", as shown in Figure 2 (note data is incomplete for 2023) (Mone and Shakhlo, 2023)      
        </pre>
+    <script type="text/javacript">
+     function drawChart() {
+       var data = newgoogle.visualization.DataTable();
+       data.addColumn('number','Number of Healthcare Data Breaches of 500 or more records');
+       data.addColumn('number','Year');
+       data.addRows([
+        [18,2009]
+        [199,2010]
+        [200,2011]
+        [218,2012]
+        [277,2013]
+        [314,2014]
+        [270,2015]
+        [329,2016]
+        [358,2017]
+        [369,2018]
+        [512,2019]
+        [663,2020]
+        [715,2021]
+        [707,2022]
+        [40,2023]
+     ]); 
+     var options = {
+      title:'HEALTHCAFRE DATA BREACHES OF 500 OR MORE RECORDS',
+      hAxis:{title:'Number of data breaches'}, 
+      vAxis:{title:'Year'}.
+     }; 
+     var chart = newgoogle.visualization.ScatterChart(document.getElementById('chart_div')); 
+     chart.draw(data,options);
+     }
+    </script>
       </p>
      <h3 id="Conclusion">Conclusion</h3>
       <p class="ex1">
@@ -223,6 +257,5 @@
         <body style="background-color:#FFFFFF;margin-left:50px;">
       </style>
       </style>
-    </head>
-  </head>
+</body>
 </html>
