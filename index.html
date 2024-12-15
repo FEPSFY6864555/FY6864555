@@ -330,7 +330,7 @@
  
      
       <meta meta="viewport" content="width=device-width,inital-scale=1">
-      <link rel="stylesheet" href="htpps://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <style>
         .mySlides {display:none;}
         <body style="background-color:#FFFFFF;margin-left:50px;">
@@ -366,7 +366,7 @@
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
                
                 // Displaying the time on load
-                document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLocaleString()}';
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
                 document.getElementById('last-updated').innerText = 'No commits found in the repository.';
             }
