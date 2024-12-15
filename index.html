@@ -396,13 +396,15 @@
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
+// Display the word count in the specified output element
+     document.getElementById(outputId).innerText = `Word Count for ${sectionId}: ${wordCount}`;
+     const text = section.textContent || section.innerText || "";
     // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
+     const wordArray = text.trim().split(/\s+/);
     // Count the words
-    const wordCount = wordArray.length;
+     const wordCount = text.trim().split(/\s+/).length;
     // Return the word count for summing purposes
-    return wordCount;
+     return wordCount;
   }
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
