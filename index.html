@@ -83,7 +83,7 @@
      
       <h3 id="Introduction">Introduction</h3>
       <p class="ex1">
-        <pre id="Introduction">
+      <pre id="Introduction_InText">
          Wearable technology provides innovative and cost-effective solutions for detecting AF, which is recognised as a global health challenge due to its rising 
          prevalence and life-threatening complications. <a href="#Kornej2020">(Kornej et al., 2020) </a> AF is a type of cardiac arrhythmia that is difficult to detect and often asymptomatic 
          with high risks of ischemic strokes and myocardial infarction <a href="#Nemati2016">(Nemati et al., 2016). </a> Traditionally, electrocardiogram (ECG) monitoring systems are used to 
@@ -91,11 +91,11 @@
          patients and healthcare providers <a href="#Duncker2021">(Duncker et al., 2021).</a> Despite their transformative potential, integrating wearable technology and AI into healthcare
          raises critical ethical concerns. This essay explores the extent of how which algorithmic bias, informed consent, and autonomy in the use of data and
          data security impact the adoption of wearable technology into healthcare.
-        </pre>
+      </pre>
       </p>
         <h3 id="Algorthmic_Bias_and_Discrimination"> Algorthmic Bias and Discrimination</h3>
       <p class="ex1">
-        <pre id="Algorithmic_Bias_and_Discrimination">
+        <pre id="Paragraph1_InText">
          A significant concern in the use of wearable technologies is the potential for algorithmic bias, which can lead to discrimination against certain 
          racial and ethnic groups. Wearables that use PPG green light signalling sensors present a technical bias where its accuracy depletes when used for
          people with darker skin tones. PPG relies on green light to detect biological signals beneath the skin, where skin tone affects the absorption of this light.          
@@ -106,9 +106,10 @@
          should aim to improve healthcare access rather than exacerbate existing healthcare disparities.
          
         </pre>
+      </p>
      <h3 id="Autonomy_and_infomed_consent"> Autonomy and infomed consent </h3>
       <p class="ex1">
-       <pre id="Autonomy_and_informed_consent">
+       <pre id="Paragraph2_InText">
         Wearable technology collects a myriad of psychological data which makes informed consent crucial to protect user autonomy. Exercise is a critical 
         determinant  of health and lack of physical activity can contribute to morbidity and mortality associated with AF <a href="#Semaan2020">(Semaan et al., 2020).</a>
         Patients can utilise wearable devices to monitor psychological parameters such as level of physical activity and heart rate to encourage behavioural change towards a               
@@ -130,7 +131,7 @@
     </p>
      <h3 id="Privacy_and_Data_Security">Privacy and Data Security</h3>
       <p class="ex1">
-       <pre id="Privacy_and_Data_Security">
+       <pre id="Paragraph3_InText">
         The pervasiveness of data collection through wearable devices has led to concerns regarding the security of data and loss of privacy. Health data 
         is considered the most sensitive category of personal information. Its growing commercial value has led to misuse for purposes such as targeted
         advertising, unlawful service acquisition and identity theft <a href="#Cilliers2019">(Cilliers, 2019)</a>,<a href="#Mone2023"> Mone and Shakhlo, 2023)</a>
@@ -211,15 +212,17 @@
        </tr>       
      </table>
      <p>
-      <pre id="Privacy_and_Data_Security">
+      <pre class="ex1">
+      <pre id="Paragraph3_InText">
        Pivotally, data integrity being compromised presents a major ethical concern as for patients that use wearable devices for monitoring of AF and for their 
        overall health. This is because their health is dependent on the security and accuracy of data and therefore breaches of privacy and misuse of information
        could deter their adoption and undermine the benefits of this technology      
       </pre>
+      </pre>
      </p> 
      <h3 id="Conclusion">Conclusion</h3>
       <p class="ex1">
-       <pre id="Conclusion">
+       <pre id="Conclusion_InText">
         Wearable technology is a transformative tool in the detection and management of AF. It provides a cost and time-effective solution as it focuses on placing
         the patient at the forefront and allows for personalised interventions that were previously unattainable. However, ethical concerns including algorithmic bias,
         data privacy and the need for informed consent, underscore the use of wearable technology. It is imperative that inclusivity, transparency and robust
@@ -324,10 +327,8 @@
     }
     </style>
       </head>
- 
-    <video controls="" width="640" height="360" muted ="" loop="" autoplay="">
-    <source scr="https://github.com/FEPSFY6864555/FY6864555/blob/main/%20ENG0018Presentation-2.mp4 type="video/mp4">
-    </video>
+    
+
      <meta name="viewport" content="width=device-width,inital-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <style>
@@ -335,7 +336,11 @@
         <body style="background-color:#FFFFFF;margin-left:50px;">
       </style>
       </style>
-    
+
+ <hr>
+  <h2 id="Presentation" style="fond-family:calibri;"><b>Presentation: </b></h2>
+  <video scr="ENG0018Presentation-2.mp4" video="800" height="450" controls>
+  </video>
     
  
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -349,8 +354,8 @@
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = 'lc01985';
-        const repo = 'FY6864555';
+        const username = 'FEPSFY6864555';
+        const repo = 'FEPSFY6864555';
        
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
@@ -397,26 +402,24 @@
 <script>
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-// Display the word count in the specified output element
-     document.getElementById(outputId).innerText = `Word Count for ${sectionId}: ${wordCount}`;
-     const text = section.textContent || section.innerText || "";
+// Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
     // Split text into words based on spaces and filter out any empty strings
-     const wordArray = text.trim().split(/\s+/);
+    const wordArray = text.trim().split(/\s+/);
     // Count the words
-     const wordCount = text.trim().split(/\s+/).length;
+    const wordCount = wordArray.length;
     // Return the word count for summing purposes
-     return wordCount;
+    return wordCount;
   }
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction");
+    const IntroductionCount = displayWordCount("Introduction_InText");
     //const AbstractCount = displayWordCount("Abstract");
-    const Paragraph1Count = displayWordCount("Algorithmic_Bias_and_Discrimination");
-    const Paragraph2Count = displayWordCount("Autonomy_and_informed_consent");
-    const Paragraph3Count = displayWordCount("Privacy_and_Data_Security");
-    const ConclusionCount = displayWordCount("Conclusion");   
+    const Paragraph1Count = displayWordCount("Paragraph1_InText");
+    const Paragraph2Count = displayWordCount("Paragraph2_InText");
+    const Paragraph3Count = displayWordCount("Paragraph3_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");   
     // Calculate the sum of all selected sections
     const AbstractCount = AbstractCount 
     const totalWordCount = IntroductionCount +  Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount;
