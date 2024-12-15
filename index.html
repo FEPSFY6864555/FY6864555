@@ -26,7 +26,7 @@
           </tr>
           
           <tr>
-            <td><a href="#Algorthmic Bias and Discrimination">Algorithmic Bias and Discrimination</td>
+            <td><a href="#Algorithmic Bias and Discrimination">Algorithmic Bias and Discrimination</td>
           </tr>
           <tr>
            <td><a href="#Autonomy and infomed consent">Autonomy and informed consent </td>
@@ -70,7 +70,7 @@
      
       <h3 id="Abstract"> Abstract </h3>
       <p class="ex1">
-        <pre>
+        <pre id="Abstract">
          Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with significant health risks. Wearable technologies have revolutionised the 
          detection of AF by enabling continuous monitoring and offering personalised healthcare solutions. However, their integration into healthcare raises
          ethical concerns such as implementations of algorithmic bias in photoplethysmography (PPG) sensors, autonomy and informed consent in empowering patients
@@ -81,7 +81,7 @@
      
       <h3 id="Introduction">Introduction</h3>
       <p class="ex1">
-        <pre>
+        <pre id="Introduction">
          Wearable technology provides innovative and cost-effective solutions for detecting AF, which is recognised as a global health challenge due to its rising 
          prevalence and life-threatening complications. (Kornej et al., 2020). AF is a type of cardiac arrhythmia that is difficult to detect and often asymptomatic 
          with high risks of ischemic strokes and myocardial infarction (Nemati et al., 2016). Traditionally, electrocardiogram (ECG) monitoring systems are used to 
@@ -93,7 +93,7 @@
       </p>
         <h3 id="Algorthmic Bias and Discrimination"> Algorthmic Bias and Discrimination</h3>
       <p class="ex1">
-        <pre>
+        <pre id="Algorithmic_Bias_and_Discrimination">
          A significant concern in the use of wearable technologies is the potential for algorithmic bias, which can lead to discrimination against certain 
          racial and ethnic groups. Wearables that use PPG green light signalling sensors present a technical bias where its accuracy depletes when used for
          people with darker skin tones. PPG relies on green light to detect biological signals beneath the skin, where skin tone affects the absorption of this light.          
@@ -108,7 +108,7 @@
         </pre>
      <h3 id="Autonomy and infomed consent"> Autonomy and infomed consent </h3>
       <p class="ex1">
-       <pre> 
+       <pre id="Autonomy_and_informed_consent">
         Wearable technology collects a myriad of psychological data which makes informed consent crucial to protect user autonomy. Exercise is a critical 
         determinant  of health and lack of physical activity can contribute to morbidity and mortality associated with AF (Semaan et al., 2020).  Patients can 
         utilise wearable devices to monitor psychological parameters such as level of physical activity and heart rate to encourage behavioural change towards a               
@@ -130,7 +130,7 @@
     </p>
      <h3 id="Privacy and Data Security">Privacy and Data Security</h3>
       <p class="ex1">
-       <pre> 
+       <pre id="Privacy_and_Data_Security">
         The pervasiveness of data collection through wearable devices has led to concerns regarding the security of data and loss of privacy. Health data 
         is considered the most sensitive category of personal information. Its growing commercial value has led to misuse for purposes such as targeted
         advertising, unlawful service acquisition and identity theft (Cilliers, 2019, Mone and Shakhlo, 2023). Users may be unaware of the extent of data being  
@@ -211,7 +211,7 @@
        </tr>       
      </table>
      <p>
-      <pre>
+      <pre id="Privacy_and_Data_Security">
        Pivotally, data integrity being compromised presents a major ethical concern as for patients that use wearable devices for monitoring of AF and for their 
        overall health. This is because their health is dependent on the security and accuracy of data and therefore breaches of privacy and misuse of information
        could deter their adoption and undermine the benefits of this technology      
@@ -219,7 +219,7 @@
      </p> 
      <h3 id="Conclusion">Conclusion</h3>
       <p class="ex1">
-       <pre> 
+       <pre id="Conclusion">
         Wearable technology is a transformative tool in the detection and management of AF. It provides a cost and time-effective solution as it focuses on placing
         the patient at the forefront and allows for personalised interventions that were previously unattainable. However, ethical concerns including algorithmic bias,
         data privacy and the need for informed consent, underscore the use of wearable technology. It is imperative that inclusivity, transparency and robust
@@ -227,7 +227,7 @@
        </pre>
       </p>
      
-     // <pre>
+     <pre>
       //  Formatting some equations using MATHML
       //  <!--MathML representations of the quadratic formula-->
       //  <math xmins="http://www.w3.org/1998/Math/MathML">
@@ -238,8 +238,10 @@
       //    <mo> = </mo>
       //      <mi> 0 </mi>
       //    </mrow>
-      //
-      //</pre>
+      
+      </pre>
+      <video scr="ENG0018Presentation-2.mp4" width="800" height="450" controls>
+      </video>
       <h3 id="References">References</h3>
       <p>
         <pre>
@@ -305,5 +307,90 @@
         <body style="background-color:#FFFFFF;margin-left:50px;">
       </style>
       </style>
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'lc01985';
+        const repo = 'FY6864555';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+    }
+    // Function to verify the last update time by re-fetching it from the API
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+    // Initial load to display the time on page load
+    window.onload = getLastUpdatedTime;
+</script>
+
+
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction");
+    const AnalysisCount = displayWordCount("Abstract");
+    const Paragraph1Count = displayWordCount("Algorithmic_Bias_and_Discrimination");
+    const Paragraph2Count = displayWordCount("Autonomy_and_informed_consent");
+    const Paragraph3Count = displayWordCount("Privacy_and_Data_Security");
+    const ConclusionCount = displayWordCount("Conclusion");   
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount + Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
 </body>
 </html>
