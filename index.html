@@ -361,7 +361,7 @@
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction");
-    const AbstractCount = displayWordCount("Abstract");
+    //const AbstractCount = displayWordCount("Abstract");
     const Paragraph1Count = displayWordCount("Algorithmic_Bias_and_Discrimination");
     const Paragraph2Count = displayWordCount("Autonomy_and_informed_consent");
     const Paragraph3Count = displayWordCount("Privacy_and_Data_Security");
@@ -370,7 +370,7 @@
     const AbstractCount = AbstractCount 
     const totalWordCount = IntroductionCount +  Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount;
     // Display the total word count
-    document.getElementById("AbstractCount").innerText = 'Abstract word count: ${AbstractCount}';
+    //document.getElementById("AbstractCount").innerText = 'Abstract word count: ${AbstractCount}';
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
