@@ -42,32 +42,9 @@
             <td><a href="#References">References</td>
           </tr>
           </table>
-          <p id="date&time"></p>
-         <script>
-          // Javascript to display the data and time on my webpage
+        
+         
  
-          const d = new Date();
-          document.getElementById("date&time").innerHTML = d;
-         </script>
-      <head>
-        <title> Conference Project  </title>
-      </head>
-      <body>
-        <button id="colorButton">Click me to change colour</button>
-        <script>
-        // Get a reference to the button element
-          var button = document.getElementById("colorButton");
-          // function to change the button color
-          function ChangeColor(){
-            // generate a random color (hexadecimal)
-            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-            // set the button's background color to the random color
-            button.style.backgroundColor = randomColor;
-          }
-          // Add a click event listener to the button
-          button.addEventListener("click",ChangeColor);
-        </script>
-      </body>
      
      
       <h3 id="Abstract"> Abstract </h3>
@@ -420,8 +397,7 @@
     const Paragraph2Count = displayWordCount("Paragraph2_InText");
     const Paragraph3Count = displayWordCount("Paragraph3_InText");
     const ConclusionCount = displayWordCount("Conclusion_InText");   
-    // Calculate the sum of all selected sections
-    const AbstractCount = AbstractCount 
+    // Calculate the sum of all selected sections 
     const totalWordCount = IntroductionCount +  Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount;
     // Display the total word count
     //document.getElementById("AbstractCount").innerText = 'Abstract word count: ${AbstractCount}';
