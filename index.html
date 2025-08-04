@@ -120,9 +120,55 @@
         incomplete for 2023)<a href="#Mone2023">(Mone and Shakhlo, 2023)</a>      
        </pre>
       </p>
-     <h4 id="References">Figure 2 </h3>
-     
-     
+     <style>
+      h5 {font-style: italic;}
+     </style>     
+  <h5 id="References"> Figure 2. Reported large-scale healthcare data breaches (500+ individuals) in the United States, illustrating ongoing risks to sensitive medical information.
+      Adapted from Mone and Shakhlo (2023). Note: 2023 data is incomplete.  </h3>
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Year", "Breaches", { role: "style" } ],
+        ["2009", 18, "#E53935"],
+        ["2010", 199, "#D81B60"], 
+        ["2011", 200, "#8E24AA"], 
+        ["2012", 218, "#5E35B1"], 
+        ["2013", 277, "#3949AB"], 
+        ["2014", 314, "#1E88E5"],
+        ["2015", 270, "#039BE5"],
+        ["2016", 329, "#00ACC1"],
+        ["2017", 358, "#00897B"],
+        ["2018", 369, "#43A047"],
+        ["2019", 512, "#7CB342"],
+        ["2020", 663, "#C0CA33"],
+        ["2021", 715, "#FDD835"],
+        ["2022", 707, "#FFB300"],
+        ["2023", 40, "#FB8C00"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Figure 2. Reported large-scale healthcare data breaches (500+ individuals) in the United States, illustrating ongoing risks to sensitive medical information. Adapted from Mone and Shakhlo (2023). Note: 2023 data is incomplete.  ",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>     
       <pre class="ex1">
       <pre id="Paragraph3_InText">
        Pivotally, data integrity being compromised presents a major ethical concern as for patients that use wearable devices for monitoring of AF and for their 
