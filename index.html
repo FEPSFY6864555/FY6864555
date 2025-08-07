@@ -280,3 +280,21 @@
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
+<!-- Word Count Display -->
+  <p id="totalWordCount"></p>
+  <hr>
+
+  <script>
+    function countWordsFromSection(sectionId) {
+      const sectionText = document.getElementById(sectionId).textContent;
+      return sectionText.trim().split(/\s+/).length;
+    }
+
+    function displayTotalWordCount() {
+      const totalWordCount = countWordsFromSection("countedContent");
+      document.getElementById("totalWordCount").innerText = `Total word count (excluding abstract and references): ${totalWordCount}`;
+    }
+
+    window.onload = displayTotalWordCount;
+  </script>
+</body>
