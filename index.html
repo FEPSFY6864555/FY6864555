@@ -104,12 +104,13 @@ Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with signi
     <hr>
     <h3 id="Introduction">Introduction</h3>
   </p>
+  <pre id="IntroInText">
 <p class="ex1">
   Wearable technology provides innovative and cost-effective solutions for detecting AF, which is recognised as a global health challenge due to its rising prevalence and life-threatening complications <a href="#Kornej2020">(Kornej et al., 2020) </a>. AF is a type of cardiac arrhythmia that is difficult to detect and often asymptomatic with high risks of ischemic strokes and myocardial infarction <a href="#Nemati2016">(Nemati et al., 2016) </a>. Traditionally, electrocardiogram (ECG) monitoring systems are used to 
   detect arrhythmias. The use of this is limited to the duration of the appointment, whereas wearable devices enable continuous monitoring that empowers patients and healthcare providers <a href="#Duncker2021">(Duncker et al., 2021)</a>.  </p>
 <p class="ex1">
   Despite their transformative potential, integrating wearable technology and AI into healthcare raises critical ethical concerns. This essay explores the extent of how which algorithmic bias, informed consent, and autonomy in the use of data and data security impact the adoption of wearable technology into healthcare.
-
+  </pre>
 </p>
  <hr>
     <h3 id="Algorithmic Bias and Discrimination" > Algorithmic Bias and Discrimination</h3>
@@ -361,14 +362,15 @@ Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with signi
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
+    const IntroductionCount = displayWordCount("IntroInText");
     //const AbstractCount = displayWordCount("Abstract");
-    const Paragraph1Count = displayWordCount("Paragraph1_InText");
-    const Paragraph2Count = displayWordCount("Paragraph2_InText");
-    const Paragraph3Count = displayWordCount("Paragraph3_InText");
-    const ConclusionCount = displayWordCount("Conclusion_InText");   
+    // const Paragraph1Count = displayWordCount("Paragraph1_InText");
+    // const Paragraph2Count = displayWordCount("Paragraph2_InText");
+    // const Paragraph3Count = displayWordCount("Paragraph3_InText");
+    // const ConclusionCount = displayWordCount("Conclusion_InText");   
     // Calculate the sum of all selected sections 
-    const totalWordCount = IntroductionCount +  Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount;
+    const totalWordCount = IntroductionCount ;
+    // +  Paragraph1Count + Paragraph2Count + Paragraph3Count + ConclusionCount
     // Display the total word count
     //document.getElementById("AbstractCount").innerText = 'Abstract word count: ${AbstractCount}';
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
