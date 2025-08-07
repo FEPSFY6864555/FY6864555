@@ -39,15 +39,7 @@
       margin-right: 15%;
       margin-bottom: 20px;
     }
-
-    /* Added style for captions (optional) */
-    p.caption {
-      font-style: italic;
-      margin-left: 10px;
-      margin-right: 15%;
-      margin-bottom: 20px;
-      color: #555;
-    }
+    
 
     img {
       border: 20px solid white;
@@ -97,217 +89,84 @@
     <h3 id="Autonomy and Informed Consent">Autonomy and Informed Consent</h3>
     <p class="ex1">Wearable technology collects a myriad of psychological data which makes informed consent crucial to protect user autonomy. Exercise is a critical determinant of health and lack of physical activity can contribute to morbidity and mortality associated with AF <a href="#Semaan2020">(Semaan et al., 2020)</a>. Patients can utilise wearable devices to monitor psychological parameters such as level of physical activity and heart rate to encourage behavioural change towards a healthier lifestyle. This aligns with the principle of the quantified self, where users feel empowered to take an active role in their own health management, and their autonomy is not limited. Promoting self-efficacy in this way supports a sustainable and innovative approach to healthcare: transitioning medical management from the clinic to the home. This means that data collected by wearable devices can be used by both the patient and clinician to monitor health conditions and implement personalised interventions, as shown in Figure 1. The clinician treating the patient must strictly adhere to confidentiality protocols so that they do not commit medical malpractice and violate HIPAA <a href="#Rose2023">(Rose, Kumar and Kass, 2023)</a>. Following this provides an innovative, cost-effective solution as it results in less outpatient visits for monitoring and patient empowerment as patients are more engaged with improving their health <a href="#Duncker2021">(Duncker et al., 2021)</a>.</p>
 
-    <p class="ex1 caption"><b>Figure 1.</b> Proposed framework for remote cardiac monitoring using wearable technology to support patient autonomy and enable personalised interventions. <a href="#AdasuriyaandHaldar2022">(Adasuriya and Haldar, 2022)</a>.<br><img src="Figure1.png" style="margin: 20px 20px 20px 20px;" alt="Figure1" width="564" height="440"></p>
+    <p class="ex1"><b>Figure 1.</b> Proposed framework for remote cardiac monitoring using wearable technology to support patient autonomy and enable personalised interventions. <a href="#AdasuriyaandHaldar2022">(Adasuriya and Haldar, 2022)</a>.<br><img src="Figure1.png" style="margin: 20px 20px 20px 20px;" alt="Figure1" width="564" height="440"></p>
 
     <p class="ex1">For the patient autonomy to not be undermined, it is crucial that there is transparency, with the patient fully aware of the data that is shared with the clinician. By placing informed consent at the forefront of remote monitoring, wearable technology exemplifies a shift towards patient-centered healthcare that prioritises autonomy and engagement.</p>
 
     <h3 id="Privacy and Data Security">Privacy and Data Security</h3>
     <p class="ex1">The pervasiveness of data collection through wearable devices has led to concerns regarding the security of data and loss of privacy. Health data is considered the most sensitive category of personal information. Its growing commercial value has led to misuse for purposes such as targeted advertising, unlawful service acquisition and identity theft <a href="#Cilliers2019">(Cilliers, 2019)</a>,<a href="#Mone2023">(Mone and Shakhlo, 2023)</a>. Users may be unaware of the extent of data being collected, stored and shared. This is because privacy policies are lengthy, complex and profuse, that conceal details of data collection and usage. Furthermore, data transmission of wearable devices compromises of wireless or Bluetooth technologies which are prone to modification as hackers can tamper with the content of exchanged data packets or alter the timestamp of them <a href="#Cilliers2019">(Cilliers, 2019)</a>. The absence of stringent security protocols and encryption for data transmission and storage leaves users vulnerable to cyber-attacks and data breaches. Healthcare breaches "affecting 500 people or more were reported to the US Office for Civil Rights of the Department of Health and Human Services (HHS)", as shown in Figure 2 <a href="#Mone2023">(Mone and Shakhlo, 2023)</a>.</p>
 
-    <p class="ex1 caption"><b>Figure 2. </b> Reported large-scale healthcare data breaches (500+ individuals) in the United States, illustrating ongoing risks to sensitive medical information. Adapted from
-      <a href="#Mone2023">(Mone and Shakhlo, 2023)</a> <i>Note: 2023 data is incomplete. </i></p>
+    <!--- Bar chart for figure 2-->  
+  <b>Figure 2. </b> Reported large-scale healthcare data breaches (500+ individuals) in the United States, illustrating ongoing risks to sensitive medical information. Adapted from
+  <a href="#Mone2023">(Mone and Shakhlo, 2023)</a> <i>Note: 2023 data is incomplete. </i> 
+</p>  
+
+<div id="columnchart_values" style="width: 850px; height: 300px;"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Year", "Breaches", { role: "style" } ],
+        ["2009", 18, "#E53935"],
+        ["2010", 199, "#D81B60"], 
+        ["2011", 200, "#8E24AA"], 
+        ["2012", 218, "#5E35B1"], 
+        ["2013", 277, "#3949AB"], 
+        ["2014", 314, "#1E88E5"],
+        ["2015", 270, "#039BE5"],
+        ["2016", 329, "#00ACC1"],
+        ["2017", 358, "#00897B"],
+        ["2018", 369, "#43A047"],
+        ["2019", 512, "#7CB342"],
+        ["2020", 663, "#C0CA33"],
+        ["2021", 715, "#FDD835"],
+        ["2022", 707, "#FFB300"],
+        ["2023", 40, "#FB8C00"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Healthcare data breaches of 500 or more records  ",
+        width: 900,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+
+
+
+
+
 
     <div id="columnchart_values" style="width: 850px; height: 300px;"></div>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {
-        packages: ['corechart']
-      });
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["Year", "Breaches", {
-            role: "style"
-          }],
-          ["2009", 18, "#E53935"],
-          ["2010", 199, "#D81B60"],
-          ["2011", 200, "#8E24AA"],
-          ["2012", 218, "#5E35B1"],
-          ["2013", 277, "#3949AB"],
-          ["2014", 314, "#1E88E5"],
-          ["2015", 270, "#039BE5"],
-          ["2016", 329, "#00ACC1"],
-          ["2017", 358, "#00897B"],
-          ["2018", 369, "#43A047"],
-          ["2019", 512, "#7CB342"],
-          ["2020", 663, "#C0CA33"],
-          ["2021", 715, "#FDD835"],
-          ["2022", 707, "#FFB300"],
-          ["2023", 40, "#FB8C00"],
-        ]);
-
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1, {
-          calc: "stringify",
-          sourceColumn: 1,
-          type: "string",
-          role: "annotation"
-        }, 2]);
-
-        var options = {
-          title: "Healthcare data breaches of 500 or more records  ",
-          width: 900,
-          height: 400,
-          bar: {
-            groupWidth: "95%"
-          },
-          legend: {
-            position: "none"
-          },
-        };
-        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-        chart.draw(view, options);
-      }
-    </script>
-
+    
     <p class="ex1">Pivotally, data integrity being compromised presents a major ethical concern as for patients that use wearable devices for monitoring of AF and for their overall health. This is because their health is dependent on the security and accuracy of data and therefore breaches of privacy and misuse of information could deter their adoption and undermine the benefits of this technology.</p>
 
     <h3 id="Conclusion">Conclusion</h3>
     <p class="ex1">Wearable technology is a transformative tool in the detection and management of AF. It provides a cost and time-effective solution as it focuses on placing the patient at the forefront and allows for personalised interventions that were previously unattainable. However, ethical concerns including algorithmic bias, data privacy and the need for informed consent, underscore the use of wearable technology. It is imperative that inclusivity, transparency and robust data protection mechanisms should be in place to harness the full potential of wearable technology.</p>
   </div>
 
-  <hr>
-
-<h3 id="References"> References</h3>
-
-  <p class="ex1">
-
-    <a id="AdasuriyaandHaldar2022"></a>
-      <b>Adasuriya, G. and Haldar, S. (2022) </b> Remote monitoring of cardiac arrhythmias using wearable digital technology: paradigm shift or pipe dream?’, <i> European Journal of Arrhythmia & Electrophysiology </i> 8(1), p.7. Available at: 
-      <a href="https://doi.org/10.17925/ejae.2022.8.1.7">(Adasuriya and Haldar, 2022)</a>.
-    (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="Cilliers2019"></a>
-      <b>Cilliers, L.  (2019) </b> Wearable devices in healthcare: Privacy and information security issues’, <i>Health Information Management Journal </i>, pp.150–156, Available at: 
-      <a href="https://doi.org/10.1177/1833358319851684">(Cilliers, 2019)</a>.
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="Colvonen2020"></a>
-    <b> Colvonen, P.J., DeYoung, P.N., Bosompra, N.A. and Owens, R.L. (2020) </b>
-      ‘Limiting racial disparities and bias for wearable devices in health science research’,<i> Sleep </i>,  Available at: 
-      <a href="https://doi.org/10.1093/sleep/zsaa159">(Colvonen et al. (2020))</a>.
-      (Accessed: 4 August 2025)
-      
-<br>
-<br>
-    <a id="Duncker2021"></a>
-    <b>Duncker, D., Ding, W.Y., Etheridge, S., Noseworthy, P.A., Veltmann, C., Yao, X., Bunch, T.J. and Gupta, D. (2021)  </b>
-      ‘Smart wearables for cardiac monitoring—real-world use beyond atrial fibrillation’, <i> Sensors </i>, 21(7), p.2539., Available at: 
-      <a href="https://doi.org/10.3390/s21072539">(Duncker et al., 2021)</a>. 
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="#Kornej2020"></a>
-      <b>Kornej, J., Börschel, C.S., Benjamin, E.J. and Schnabel, R.B. (2020).</b> ‘Epidemiology of atrial fibrillation in the 21st century’,<i> Circulation Research </i>, 127(1), pp.4–20.  Available at:  
-      <a href="https://doi.org/10.1161/circresaha.120.316340.">(Kornej et al., 2020)</a>.
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="#MeridandVolpe2023"></a>
-      <b>Merid, B. and Volpe, V. (2023) </b> ‘Race correction and algorithmic bias in atrial fibrillation wearable technologies’,<i> Health Equity,</i> 7(1), pp.817–824. Available at:  
-      <a href="https://doi.org/10.1089/heq.2023.0034.">(Merid and Volpe, 2023)</a>.
-      (Accessed: 4 August 2025)
-<br>    
-<br>
-    <a id="#Mone2023"></a>
-      <b>Mone, V. and Shakhlo, F. (2023) </b> ‘Health data on the go: Navigating privacy concerns with wearable technologies’, <i>Legal Information Management </i>, 23(3), pp.179–188.  Available at:  
-      <a href="https://doi.org/10.1017/s1472669623000427.">(Mone and Shakhlo, 2023)</a>.
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="#Nemati2016"></a>
-      <b>Nemati, S., Ghassemi, M.M., Ambai, V., Isakadze, N., Levantsevych, O.M., Shah, A.J. and Clifford, G.D. (2016)  </b> ‘Monitoring and detecting atrial fibrillation using wearable technology’,<i>Proceedings of the 2016 38th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</i>pp.3394–3397. Available at:  
-      <a href="https://doi.org/10.1109/EMBC.2016.7591456.">(Nemati et al., 2016)</a>.
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="#Rose2023"></a>
-      <b>Rose, R.V., Kumar, A. and Kass, J.S. (2023) </b> ‘Protecting privacy’,<i>Neurologic Clinics</i>pp.513–522. Available at:  
-      <a href="https://doi.org/10.1016/j.ncl.2023.03.007.">(Rose, Kumar and Kass, 2023) </a>. 
-      (Accessed: 4 August 2025)
-<br>
-<br>
-    <a id="#Semaan2020"></a>
-      <b>Semaan, S., Van Wagoner, D.R., Althouse, A.D., Kilic, A., Jackson, L.R., Nazarian, S., Trulock, K.M., Smith, J.D., Koene, R.J., Chicos, A.B. and Chung, M.K. (2020) </b>, ‘Physical activity and atrial fibrillation: Data from wearable fitness trackers’,<i> Heart Rhythm </i>17(5), pp.842–846. Available at:  
-      <a href="https://doi.org/10.1016/j.hrthm.2020.02.013.v.">(Semaan et al., 2020) </a>. 
-      (Accessed: 4 August 2025)
-<br>
-<br>
-  
-<!--- presentation --->
-
-  <p class="ex1">
-    <hr>
-    <h3 id="Presentation">Presentation: Ethical considerations in the integration of wearable technology and AI in healthcare</h3>
-  </p>
-<video src="Larissa.Cortez.Computer&DataScience.mp4" width="800" height="450" controls>
-  </video>
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-</button>
-<script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6864555';
-        const repo = 'FY6864555';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-        }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
-</script>
   <!-- Word Count Display -->
   <p id="totalWordCount"></p>
   <hr>
 
   <script>
     function countWordsFromSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      // Select all <p> inside countedContent excluding those with class "caption"
-      const paragraphs = section.querySelectorAll("p:not(.caption)");
-      let wordCount = 0;
-      paragraphs.forEach(p => {
-        const words = p.textContent.trim().split(/\s+/);
-        wordCount += words.length;
-      });
-      return wordCount;
+      const sectionText = document.getElementById(sectionId).textContent;
+      return sectionText.trim().split(/\s+/).length;
     }
 
     function displayTotalWordCount() {
@@ -319,3 +178,4 @@
   </script>
 </body>
 
+</html>
