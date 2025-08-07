@@ -102,9 +102,9 @@ Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with signi
 </p>
 
     <hr>
+  <pre id="IntroInText">
     <h3 id="Introduction">Introduction</h3>
   </p>
-  <pre id="IntroInText">
 <p class="ex1">
   Wearable technology provides innovative and cost-effective solutions for detecting AF, which is recognised as a global health challenge due to its rising prevalence and life-threatening complications <a href="#Kornej2020">(Kornej et al., 2020) </a>. AF is a type of cardiac arrhythmia that is difficult to detect and often asymptomatic with high risks of ischemic strokes and myocardial infarction <a href="#Nemati2016">(Nemati et al., 2016) </a>. Traditionally, electrocardiogram (ECG) monitoring systems are used to 
   detect arrhythmias. The use of this is limited to the duration of the appointment, whereas wearable devices enable continuous monitoring that empowers patients and healthcare providers <a href="#Duncker2021">(Duncker et al., 2021)</a>.  </p>
@@ -113,12 +113,13 @@ Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with signi
   </pre>
 </p>
  <hr>
+  <pre id="Paragraph1">
     <h3 id="Algorithmic Bias and Discrimination" > Algorithmic Bias and Discrimination</h3>
   </p>
 <p class="ex1">
   A significant concern in the use of wearable technologies is the potential for algorithmic bias, which can lead to discrimination against certain racial and ethnic groups. Wearables that use photoplethysmography (PPG) green light signalling sensors present a technical bias where its accuracy depletes when used for people with darker skin tones. PPG relies on green light to detect biological signals beneath the skin, where skin tone affects the absorption of this light. Green light is less able to penetrate deeper into the skin of individuals with darker pigmentation, leading to less accurate readings. Despite products being advertised as suitable for all skin tones, they still exhibit bias and discrimination against individuals with darker skin tones. This hinders the integrity of wearable devices as it reinforces racial disparities by not being accessible and accurate to all <a href="#Colvonen2020">(Colvonen et al. (2020)</a>,<a href="#MeridandVolpe2023">(Merid and Volpe, 2023)</a>. Crucially, this represents an ethical violation, as advances in wearable technology  should aim to improve healthcare access rather than exacerbate existing healthcare disparities.
   </p>
-
+  </pre>
 <h3 id="Autonomy and Informed Consent"> Autonomy and Informed Consent</h3>
 <p class="ex1">
   Wearable technology collects a myriad of psychological data which makes informed consent crucial to protect user autonomy. Exercise is a critical determinant of health and lack of physical activity can contribute to morbidity and mortality associated with AF <a href="#Semaan2020">(Semaan et al., 2020)</a>. Patients can utilise wearable devices to monitor psychological parameters such as level of physical activity and heart rate to encourage behavioural change towards a healthier lifestyle. This aligns with the principle of the quantified self, where users feel empowered to take an active role in their own health management, and their autonomy is not limited. Promoting self-efficacy in this way supports a sustainable and innovative approach to healthcare: transitioning medical management from the clinic to the home. This means that data collected by wearable devices can be used by both the patient and clinician to monitor health conditions and implement personalised interventions, as shown in Figure 1. The clinician treating the patient must strictly adhere to confidentiality protocols so that they do not commit medical malpractice and violate HIPAA <a href="#Rose2023">(Rose, Kumar and Kass, 2023)</a>.Following this provides an innovative, cost-effective solution as it results in less outpatient visits for monitoring and patient empowerment as patients are more engaged with improving their health <a href="#Duncker2021">(Duncker et al., 2021)</a>.  
@@ -363,9 +364,9 @@ Atrial fibrillation (AF) is a prevalent cardiac arrhythmia associated with signi
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("IntroInText");
-    // const AnalysisCount = displayWordCount("Analysis_InText");
+    const Paragraph1Count = displayWordCount("Paragraph1");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount;
+    const totalWordCount = IntroductionCount + Paragraph1Count;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
